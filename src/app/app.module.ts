@@ -15,6 +15,8 @@ import {FilterComponent} from './filter/filter.component';
 import {TagComponent} from './tag/tag.component';
 import { FilterPipe } from './filter/filter.pipe';
 import { TakePipe } from './take.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CreditsComponent } from './credits/credits.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,9 @@ import { TakePipe } from './take.pipe';
         FilterComponent,
         TagComponent,
         FilterPipe,
-        TakePipe
+        TakePipe,
+        NavbarComponent,
+        CreditsComponent
     ],
     imports: [
         BrowserModule,
