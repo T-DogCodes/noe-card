@@ -1,0 +1,20 @@
+.list {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-evenly;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 5rem;
+}
+

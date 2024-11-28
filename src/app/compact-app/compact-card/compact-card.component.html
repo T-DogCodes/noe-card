@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="header">
+        {{value.title}}
+    </div>
+    <div class="address">
+        {{value.contact.zipcode}} {{value.contact.city}}
+    </div>
+    <div class="image">
+        <img src="{{value.mainImage.mobileUrl}}">
+    </div>
+    <div class="footer">
+        <a class="further-info"  target="_blank" [href]="'https://www.niederoesterreich-card.at/' + value.uri">Weitere Informationen</a>
+        <div class="tag-container">
+            <app-tag *ngFor="let tag of (rating?.tag ?? [])" [tag]="tag"></app-tag>
+        </div>
+    </div>
+</div>

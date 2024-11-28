@@ -1,0 +1,7 @@
+<div class="filter">
+    <div class="row">
+        <div class="tag-container" *ngFor="let tag of tags">
+            <app-tag [tag]="tag" (click)="onClick(tag)" [state]="states[tag]"></app-tag>
+        </div>
+    </div>
+</div>

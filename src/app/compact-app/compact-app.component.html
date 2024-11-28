@@ -1,0 +1,20 @@
+<app-filter (filterValues)="onFilterChange($event)"></app-filter>
+
+<h2 class="heading">FAVORIT ({{(data?.entries ?? []) | rating:1 | length}})</h2>
+<div class="list" *ngIf="data != null">
+    <app-compact-card *ngFor="let e of data.entries | rating:1 | filter:filter" [value]="e"></app-compact-card>
+</div>
+
+<h2 class="heading">TOLL ({{(data?.entries ?? []) | rating:2 | length}})</h2>
+<div class="list" *ngIf="data != null">
+    <app-compact-card *ngFor="let e of data.entries | rating:2| filter:filter" [value]="e"></app-compact-card>
+</div>
+<h2>OK ({{(data?.entries ?? []) | rating:3 | length}})</h2>
+<div class="list" *ngIf="data != null">
+    <app-compact-card *ngFor="let e of data.entries | rating:3| filter:filter" [value]="e"></app-compact-card>
+</div>
+
+<h2>NEIN ({{(data?.entries ?? []) | rating:4 | length}})</h2>
+<div class="list" *ngIf="data != null">
+    <app-compact-card *ngFor="let e of data.entries | rating:4| filter:filter" [value]="e"></app-compact-card>
+</div>

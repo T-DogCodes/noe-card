@@ -1,0 +1,73 @@
+.tag {
+    height: 1.5em;
+    width: 1.5em;
+    color: white;
+    padding: 0.4em;
+    border-radius: 50%;
+    background: #333333;
+}
+
+.state-0 {
+    filter: grayscale(70%) brightness(150%);
+}
+
+.state-0:is(.Blumen, .Park, .Schloss, .Zoo, .Schwimmen, .Ski, .Eislaufen) {
+    filter: grayscale(70%) brightness(100%);
+}
+
+.state-1 {
+
+}
+
+.state-2 {
+    background: #333333 !important;
+    border-width: 0.25em;
+    border-style: solid;
+}
+
+.state-2:is(.Blumen, .Park, .Schloss, .Zoo, .Schwimmen, .Ski, .Eislaufen) {
+
+}
+
+.Wandern, .Riding, .Naturaktivität, .Klettergarten, .Hoehle, .Klettern {
+    background: green;
+    border-color: green;
+}
+
+.Bahn, .Schiff {
+    background: blue;
+    border-color: blue;
+}
+
+.Blumen, .Park {
+    background: lightgreen;
+    border-color: lightgreen;
+}
+
+.Schloss {
+    background: darkgray;
+    border-color: darkgray;
+}
+
+.Zoo {
+    background: orange;
+    border-color: orange;
+}
+
+.Museum, .Kunst, .Geschichte, .Architektur, .Religion, .Wein, .Stadtrundgang, .Schnaps,
+.Technik, .Erlebniswelt, .Bier, .Verkehr
+{
+    background: purple;
+    border-color: purple;
+}
+
+.Schwimmen, .Ski, .Eislaufen {
+    background: aqua;
+    border-color: aqua;
+}
+
+.Attraktion, .Sommerrodelbahn, .Trampolin, .Minigolf {
+    background: red;
+    border-color: red;
+}
+

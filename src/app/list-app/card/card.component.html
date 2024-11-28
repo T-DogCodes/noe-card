@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="Header">
+        <div class="title">{{value.id}} {{value.title}}</div>
+        <div class="address">{{value.contact.zipcode}} {{value.contact.city}}</div>
+    </div>
+    <div class="body">
+        <div class="image">
+            <img [src]="value.mainImage.cardUrl1x" [alt]="value.mainImage.altText">
+        </div>
+        <div class="description" [innerHTML]="value.description | description"></div>
+    </div>
+    <div class="footer">
+        <a class="further-info"  target="_blank" [href]="'https://www.niederoesterreich-card.at/' + value.uri">Weitere Informationen</a>
+        <div *ngIf="rating != null" [class]="'rating rating-'+rating.rating">
+            <p *ngIf="rating.rating == 1">FAVORIT</p>
+            <p *ngIf="rating.rating == 2">TOLL</p>
+            <p *ngIf="rating.rating == 3">OK</p>
+            <p *ngIf="rating.rating == 4">NEIN</p>
+        </div>
+        <div class="tag-container">
+            <app-tag *ngFor="let tag of (rating?.tag ?? [])" [tag]="tag"></app-tag>
+        </div>
+    </div>
+</div>

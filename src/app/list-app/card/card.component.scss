@@ -1,0 +1,131 @@
+.card {
+    border: 1px solid black;
+    padding: 0;
+    width: 80vw;
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: lightgray;
+    padding: 0.7em;
+}
+
+.title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    padding: 0.7em;
+    gap: 0.7em
+}
+
+.footer {
+    background: #cdddf1;
+    padding: 0.7em;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em
+}
+
+.further-info {
+    background-color: #ffd500;
+    color: #005a9a;
+    font-weight: bold;
+    border: none;
+    padding: 0.5em 0.8em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.rating p {
+    padding: 0;
+    margin: 0;
+}
+
+.rating {
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.5em 0.8em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 4em;
+}
+
+.rating-1 {
+    background-color: #1E8449;
+}
+
+.rating-2 {
+    background-color: #58D68D;
+}
+.rating-3 {
+    background-color: #F5B041;
+}
+.rating-4 {
+    background-color: #E74C3C;
+}
+
+.tag-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.tag {
+    height: 1.5em;
+    width: 1.5em;
+    color: white;
+    padding: 0.4em;
+    border-radius: 50%;
+}
+
+.tag-Wandern, .tag-Riding, .tag-Naturaktivität {
+    background: green;
+}
+
+.tag-Bahn, .tag-Schiff {
+    background: blue;
+}
+
+.tag-Blumen {
+    background: lightgreen;
+}
+
+.tag-Attraktion {
+    background: red;
+}
+
+.tag-Schloss {
+    background: darkgray;
+}
+
+.tag-Park {
+    background: lightgreen;
+}
+
+.tag-Zoo {
+    background: orange;
+}
+
+.tag-Museum, .tag-Kunst, .tag-Geschichte {
+    background: purple;
+}
+
+.tag-Schwimmen {
+    background: aqua;
+}
+
+.tag-Sommerrodelbahn {
+    background: red;
+}
