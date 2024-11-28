@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   version="1.1"
+   id="Icons"
+   viewBox="0 0 896 864.49506"
+   xml:space="preserve"
+   width="896"
+   height="864.49506"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs4" />
+<style
+   type="text/css"
+   id="style1">
+	.st0{fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g
+   id="g1"
+   transform="translate(-64,-63.504959)">
+	<path
+   d="M 29,29 H 8 c -3.3,0 -6,-2.7 -6,-6 0,-0.6 0.4,-1 1,-1 0.6,0 1,0.4 1,1 0,2.2 1.8,4 4,4 h 21 c 0.6,0 1,0.4 1,1 0,0.6 -0.4,1 -1,1 z"
+   id="path1" />
+</g>
+<g
+   id="g2"
+   transform="translate(-64,-63.504959)">
+	<path
+   d="m 23,29 c -0.6,0 -1,-0.4 -1,-1 v -5 c 0,-0.6 0.4,-1 1,-1 0.6,0 1,0.4 1,1 v 5 c 0,0.6 -0.4,1 -1,1 z"
+   id="path2" />
+</g>
+<g
+   id="g3"
+   transform="translate(-64,-63.504959)">
+	<path
+   d="m 11,29 c -0.6,0 -1,-0.4 -1,-1 v -5 c 0,-0.6 0.4,-1 1,-1 0.6,0 1,0.4 1,1 v 5 c 0,0.6 -0.4,1 -1,1 z"
+   id="path3" />
+</g>
+<path
+   d="m -37.8,-51.604959 -0.2,-0.2 v -4.7 c 0,-0.6 -0.4,-1 -1,-1 h -2 v 2 c 0,0.6 -0.4,1 -1,1 -0.6,0 -1,-0.4 -1,-1 v -2 c -0.3,-1.2 -1.2,-2.2 -2.3,-2.8 l -2.2,-1.1 c -0.3,-0.2 -0.7,-0.1 -1,0 -0.3,0.1 -0.5,0.6 -0.5,0.9 v 5.6 c 0,1 0,1.9 -0.3,2.6 l 3,3 c 0.4,0.4 0.4,1 0,1.4 -0.2,0.3 -0.4,0.4 -0.7,0.4 -0.3,0 -0.5,-0.1 -0.7,-0.3 l -2.9,-2.9 c -0.2,0.1 -0.5,0.3 -0.8,0.4 l -1.6,0.4 2.7,2.7 c 0.4,0.4 0.4,1 0,1.4 -0.2,0.2 -0.4,0.3 -0.7,0.3 -0.3,0 -0.5,-0.1 -0.7,-0.3 l -3.4,-3.4 -3.1,0.9 c -2.2,0.6 -3.8,2.6 -3.8,5 v 2.8 c 0,0.6 0.4,1 1,1 h 9.3 c 1,0 2.1,-0.2 3.1,-0.5 l 3.6,-1.1 v 0.6 c 0,0.6 0.4,1 1,1 h 7 c 0.6,0 1,-0.4 1,-1 v -4 c 0,-3 -0.5,-5.1 -1.8,-7.1 z"
+   id="path4"
+   style="fill:#ffffff;fill-opacity:1" />
+</svg>
