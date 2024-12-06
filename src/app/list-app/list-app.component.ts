@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {NoecardService} from "../../service/noecard.service";
-import {Filter, NoeCardResponse, State} from "../declarations";
+import {Filter, NoeCardResponse, State, Trip} from "../declarations";
+import {TripsService} from "../../service/trips.service";
 
 @Component({
     selector: 'app-list-app',
@@ -13,8 +14,11 @@ export class ListAppComponent implements OnInit {
 
     filter: Filter | null = null;
 
+    @Input() trip : Trip | null = null
+
     constructor(
-        private noecardService: NoecardService
+        private noecardService: NoecardService,
+        private tripsService: TripsService
     ) {
     }
 
@@ -46,7 +50,9 @@ export class ListAppComponent implements OnInit {
                     "order": "asc"
                 }
             ]
-        }).subscribe(value => this.data = value)
+        }).subscribe(value => {
+            this.data = this.trip == null ? value : this.tripsService.filterDataForTrips(value, this.trip)
+        })
     }
 
     onFilterChange(value: Filter) {

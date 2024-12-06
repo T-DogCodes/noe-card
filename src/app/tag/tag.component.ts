@@ -10,7 +10,7 @@ import {State} from "../declarations";
 export class TagComponent implements OnInit {
 
     @Input() tag!: string;
-    @Input() state: State = State.ACTIVE
+    @Input() state: State = State.STATIC
 
     @HostListener("click") onClick(){
     }

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {TAGS} from "../../service/TAGS";
-import {State} from "../declarations";
+import {Filter, SORTING_CRITERIA_NAME, SORTING_CRITERIAS, SortingCriteria, State} from "../declarations";
 
 @Component({
   selector: 'app-filter',
@@ -10,32 +10,73 @@ import {State} from "../declarations";
 export class FilterComponent implements OnInit {
 
     tags = TAGS
-    states: {[key: string]: State} = {}
+    ratings = ["1", "2", "3", "4"]
+    tagStates: {[key: string]: State} = {}
 
-    @Output() filterValues = new EventEmitter<{[key: string]: State}>();
+    ratingStates : {[key: string]: State} = {}
+    ratingNames: {[key: string]: string} = {
+        1:"Favorit",2: "Toll", 3: "OK", 4: "Nein"
+    }
+
+    asc: boolean = true
+    sortingCriterias = SORTING_CRITERIAS;
+    sortingCriteria = SortingCriteria.DEFAULT;
+    sortingCriteriaName = SORTING_CRITERIA_NAME;
+
+
+    @Output() filterValues = new EventEmitter<Filter>();
 
   constructor() {
   }
 
   ngOnInit(): void {
     for (let tag of this.tags) {
-        this.states[tag] = State.IDLE;
+        this.tagStates[tag] = State.IDLE;
+    }
+    for (let state of this.ratings) {
+        this.ratingStates[state] = State.IDLE;
     }
   }
 
-  onClick (tag: string) {
-        switch (this.states[tag]) {
+  onClickTag (tag: string) {
+        this.changeState(tag, this.tagStates)
+        this.emitFilterValues()
+  }
+
+    onClickRating (rating: string) {
+        this.changeState(rating, this.ratingStates)
+        this.emitFilterValues()
+    }
+
+    private changeState(id: string, elements: {[key: string]: State}) {
+        switch (elements[id]) {
             case State.IDLE:
-                this.states[tag] = State.ACTIVE
+                elements[id] = State.ACTIVE
                 break;
             case State.ACTIVE:
-                this.states[tag] = State.INACTIVE
+                elements[id] = State.INACTIVE
                 break;
             case State.INACTIVE:
-                this.states[tag] = State.IDLE
+                elements[id] = State.IDLE
                 break;
         }
+    }
 
-        this.filterValues.emit({...this.states})
-  }
+    private emitFilterValues() {
+
+        this.filterValues.emit({
+            ratings: this.ratingStates,
+            tags: this.tagStates,
+            sorting: {asc: this.asc, criteria: +this.sortingCriteria}
+        })
+    }
+
+    onSortingClick() {
+        this.asc = !this.asc;
+        this.emitFilterValues()
+    }
+
+    onSortingChange() {
+        this.emitFilterValues()
+    }
 }

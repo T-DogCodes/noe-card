@@ -17,6 +17,9 @@ import { FilterPipe } from './filter/filter.pipe';
 import { TakePipe } from './take.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreditsComponent } from './credits/credits.component';
+import {FormsModule} from "@angular/forms";
+import { TripsComponent } from './trips/trips.component';
+import { TripComponent } from './trip/trip.component';
 
 @NgModule({
     declarations: [
@@ -33,12 +36,15 @@ import { CreditsComponent } from './credits/credits.component';
         FilterPipe,
         TakePipe,
         NavbarComponent,
-        CreditsComponent
+        CreditsComponent,
+        TripsComponent,
+        TripComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

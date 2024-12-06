@@ -1,0 +1,24 @@
+.trip-container {
+    border: 1px solid grey;
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    font-size: 1.25em;
+    font-weight: bold;
+    font-style: italic;
+    background: lightgray;
+    padding: 0.25em;
+}
+
+.info {
+    padding: 0.25em;
+}

@@ -86,7 +86,35 @@ export type Rating = {
 
 
 export enum State {
-    IDLE, ACTIVE, INACTIVE
+    IDLE, ACTIVE, INACTIVE, STATIC
 }
 
-export type Filter = {[key: string]: State};
+export type Filter = {
+    tags: FilterElement
+    ratings: FilterElement,
+    sorting: {asc: boolean, criteria: SortingCriteria}
+};
+
+export type FilterElement ={[key: string]: State};
+
+export enum SortingCriteria {
+    DEFAULT,
+    NAME,
+    ID,
+    RATING,
+}
+
+export const SORTING_CRITERIA_NAME = {
+    [SortingCriteria.DEFAULT]: "Default",
+    [SortingCriteria.NAME]: "Name",
+    [SortingCriteria.ID]: "ID",
+    [SortingCriteria.RATING]: "Rating",
+}
+
+export const SORTING_CRITERIAS = [SortingCriteria.DEFAULT, SortingCriteria.NAME, SortingCriteria.ID, SortingCriteria.RATING]
+
+export interface Trip {
+    id: number,
+    name: string,
+    elements: number[]
+}

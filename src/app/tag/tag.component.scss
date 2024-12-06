@@ -16,17 +16,13 @@
 }
 
 .state-1 {
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .state-2 {
     background: #333333 !important;
     border-width: 0.25em;
     border-style: solid;
-}
-
-.state-2:is(.Blumen, .Park, .Schloss, .Zoo, .Schwimmen, .Ski, .Eislaufen) {
-
 }
 
 .Wandern, .Riding, .Naturaktivität, .Klettergarten, .Hoehle, .Klettern {

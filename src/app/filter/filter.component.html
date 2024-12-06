@@ -1,7 +1,18 @@
 <div class="filter">
     <div class="row">
         <div class="tag-container" *ngFor="let tag of tags">
-            <app-tag [tag]="tag" (click)="onClick(tag)" [state]="states[tag]"></app-tag>
+            <app-tag [tag]="tag" (click)="onClickTag(tag)" [state]="tagStates[tag]"></app-tag>
         </div>
+    </div>
+    <div class="row">
+        <button *ngFor="let rating of ratings" [class]="'rating-' + rating + ' state-' + ratingStates[rating]" (click)="onClickRating(rating)">
+            {{ratingNames[rating] | uppercase}}
+        </button>
+    </div>
+    <div class="row sorting-row">
+        <button class="sorting-button {{asc ? '' : ' desc'}}" (click)="onSortingClick()">➤</button>
+        <select [(ngModel)]="sortingCriteria" (change)="onSortingChange()">
+            <option *ngFor="let sc of sortingCriterias" [value]="sc">{{sortingCriteriaName[sc]}}</option>
+        </select>
     </div>
 </div>

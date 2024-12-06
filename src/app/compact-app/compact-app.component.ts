@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Filter, NoeCardResponse} from "../declarations";
+import {Filter, NoeCardResponse, SortingCriteria} from "../declarations";
 import {NoecardService} from "../../service/noecard.service";
 
 @Component({
@@ -52,4 +52,6 @@ export class CompactAppComponent implements OnInit {
     onFilterChange(filter: Filter) {
         this.filter = filter;
     }
+
+    readonly SortingCriteria = SortingCriteria;
 }

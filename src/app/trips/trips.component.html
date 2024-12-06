@@ -1,0 +1,10 @@
+<div class="list">
+    <div *ngFor="let trip of trips" class="trip-container" [routerLink]="['/trip', trip.id]">
+        <div class="header">
+            {{trip.name}}
+        </div>
+        <div class="info">
+            {{trip.elements.length}} Ausflugsziele
+        </div>
+    </div>
+</div>
