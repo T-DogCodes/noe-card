@@ -5,7 +5,7 @@ import {Filter, SORTING_CRITERIA_NAME, SORTING_CRITERIAS, SortingCriteria, State
 /**
  * The filter component is to provide filter possibilities to the end-user
  *
- * On filter change, the current filter settings are emited using the
+ * On filter change, the current filter settings are emitted using the
  * filterValues output.
  *
  * To apply the filter to the data, use the filter pipe

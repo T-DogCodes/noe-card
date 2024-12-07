@@ -380,7 +380,7 @@ export class RatingService {
     constructor() {
     }
 
-    getRatingForId(id: number): Rating | undefined {
-        return ratings[id];
+    getRatingForId(id: number): Rating | null {
+        return ratings[id] ?? null;
     }
 }

@@ -6,7 +6,7 @@
         {{value.contact.zipcode}} {{value.contact.city}}
     </div>
     <div class="image">
-        <img src="{{value.mainImage.mobileUrl}}">
+        <img src="{{value.mainImage.mobileUrl}}" [alt]="value.mainImage.altText">
     </div>
     <div class="footer">
         <a class="further-info"  target="_blank" [href]="'https://www.niederoesterreich-card.at/' + value.uri">Weitere Informationen</a>

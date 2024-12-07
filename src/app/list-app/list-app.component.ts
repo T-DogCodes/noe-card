@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NoecardService} from "../../service/noecard.service";
-import {Filter, NoeCardResponse, State, Trip} from "../declarations";
+import {Filter, NoeCardResponse, Trip} from "../declarations";
 import {TripsService} from "../../service/trips.service";
 
 @Component({

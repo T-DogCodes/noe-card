@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Entry, NoeCardResponse, Trip} from "../app/declarations";
+import {NoeCardResponse, Trip} from "../app/declarations";
 
 @Injectable({
     providedIn: 'root'
