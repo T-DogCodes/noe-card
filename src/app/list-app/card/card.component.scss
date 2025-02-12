@@ -134,7 +134,7 @@
     background: red;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 550px) {
     .tag-container {
         min-width: 100%;
         justify-content: space-around;
@@ -143,6 +143,7 @@
     .footer {
         flex-wrap: wrap-reverse;
         justify-content: space-between;
+        gap: 0;
     }
 
     .Header {

@@ -10,7 +10,7 @@
         <div class="description" [innerHTML]="value.description | description"></div>
     </div>
     <div class="footer">
-        <a class="further-info"  target="_blank" [href]="'https://www.niederoesterreich-card.at/' + value.uri">Weitere Informationen</a>
+        <a class="further-info"  target="_blank" [href]="'https://www.niederoesterreich-card.at/' + value.uri">{{buttonText}}</a>
         <div *ngIf="rating != null" [class]="'rating rating-'+rating.rating">
             <p *ngIf="rating.rating == 1">FAVORIT</p>
             <p *ngIf="rating.rating == 2">TOLL</p>
