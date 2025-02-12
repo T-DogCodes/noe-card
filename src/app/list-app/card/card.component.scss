@@ -133,3 +133,29 @@
 .tag-Sommerrodelbahn {
     background: red;
 }
+
+@media screen and (max-width: 1080px) {
+    .tag-container {
+        min-width: 100%;
+        justify-content: space-around;
+    }
+
+    .footer {
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+    }
+
+    .Header {
+        flex-direction: column;
+    }
+
+    .body {
+        flex-direction: column;
+    }
+
+    .image {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

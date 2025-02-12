@@ -1,6 +1,16 @@
 <app-filter (filterValues)="onFilterChange($event)"></app-filter>
 
+<h2 *ngIf="(data?.entries ?? []) | uncategorized | length">
+    UNKETEGORISIERT ({{(data?.entries ?? []) | uncategorized | length}})
+</h2>
+<div class="list" *ngIf="data != null && ((data.entries ?? []) | uncategorized | length)">
+    <app-compact-card *ngFor="let e of data.entries | uncategorized" [value]="e"></app-compact-card>
+</div>
+
+
+
 <div class="content" *ngIf="filter?.sorting?.criteria == SortingCriteria.RATING">
+
     <h2 *ngIf="(data?.entries ?? []) | rating:1 | filter:filter | length">
         FAVORIT ({{(data?.entries ?? []) | rating:1 | filter:filter | length}})
     </h2>

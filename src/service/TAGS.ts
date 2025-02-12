@@ -10,6 +10,7 @@ export const SCHWIMMEN = "Schwimmen"
 export const SOMMERRODELBAHN = "Sommerrodelbahn"
 export const RIDING = "Riding"
 export const NATURAKTIVITAET = "Naturaktivität"
+export const BOGENSCHIESSEN = "Bogenschießen"
 export const GESCHICHTE = "Geschichte"
 export const ARCHITEKTUR = "Architektur"
 export const KUNST = "Kunst"
@@ -32,7 +33,7 @@ export const MINIGOLF = "Minigolf"
 
 export const TAGS = [
     BAHN, SCHIFF,
-    WANDERN, NATURAKTIVITAET, RIDING, KLETTERGARTEN, HOEHLE, KLETTERN,
+    NATURAKTIVITAET, WANDERN, BOGENSCHIESSEN, RIDING, KLETTERGARTEN, HOEHLE, KLETTERN,
     PARK, BLUMEN,
     ATTRAKTION, SOMMERRODELBAHN, TRAMPOLIN, MINIGOLF,
     SCHLOSS,

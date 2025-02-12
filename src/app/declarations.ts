@@ -80,7 +80,8 @@ export type Entry = {
 
 export type Rating = {
     rating: number,
-    tag?: string[]
+    tag?: string[],
+    district: string
 
 }
 

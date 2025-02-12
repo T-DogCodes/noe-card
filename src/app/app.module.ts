@@ -20,6 +20,7 @@ import { CreditsComponent } from './credits/credits.component';
 import {FormsModule} from "@angular/forms";
 import { TripsComponent } from './trips/trips.component';
 import { TripComponent } from './trip/trip.component';
+import { UncategorizedPipe } from './compact-app/uncategorized.pipe';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { TripComponent } from './trip/trip.component';
         NavbarComponent,
         CreditsComponent,
         TripsComponent,
-        TripComponent
+        TripComponent,
+        UncategorizedPipe
     ],
     imports: [
         BrowserModule,

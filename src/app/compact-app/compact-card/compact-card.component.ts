@@ -32,6 +32,6 @@ export class CompactCardComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.rating = this.ratingService.getRatingForId(this.value.id)
+        this.rating = this.ratingService.getRatingForId(this.value.id)??undefined
     }
 }

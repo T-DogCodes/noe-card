@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ARCHITEKTUR, ATTRAKTION, BAHN, BIER, BLUMEN, EISLAUFEN, ERLEBNISWELT, GESCHICHTE, HOEHLE, KLETTERGARTEN, KLETTERN, KUNST, MINIGOLF, MUSEUM, NATURAKTIVITAET, PARK, RELIGION, RIDING, SCHIFF, SCHLOSS, SCHNAPS, SCHWIMMEN, SKI, SOMMERRODELBAHN, STADTRUNDGANG, TECHNIK, TRAMPOLIN, VERKEHR, WANDERN, WEIN, ZOO} from "./TAGS";
+import {ARCHITEKTUR, ATTRAKTION, BAHN, BIER, BLUMEN, BOGENSCHIESSEN, EISLAUFEN, ERLEBNISWELT, GESCHICHTE, HOEHLE, KLETTERGARTEN, KLETTERN, KUNST, MINIGOLF, MUSEUM, NATURAKTIVITAET, PARK, RELIGION, RIDING, SCHIFF, SCHLOSS, SCHNAPS, SCHWIMMEN, SKI, SOMMERRODELBAHN, STADTRUNDGANG, TECHNIK, TRAMPOLIN, VERKEHR, WANDERN, WEIN, ZOO} from "./TAGS";
 
 const IMAGES_FOR_TAGS: {[key: string]: string} = {
     [BAHN]: "train-svgrepo-com.svg",
@@ -13,7 +13,8 @@ const IMAGES_FOR_TAGS: {[key: string]: string} = {
     [SCHWIMMEN]: "swimming-svgrepo-com.svg",
     [SOMMERRODELBAHN]: "bobsled-svgrepo-com.svg",
     [RIDING]: "cycling-2-svgrepo-com.svg",
-    [NATURAKTIVITAET]: "bow-and-arrow-svgrepo-com.svg",
+    [BOGENSCHIESSEN]: "bow-and-arrow-svgrepo-com.svg",
+    [NATURAKTIVITAET]: "forest-svgrepo-com.svg",
     [GESCHICHTE]: "mammoth-svgrepo-com.svg",
     [ARCHITEKTUR]: "architecture-svgrepo-com.svg",
     [KUNST]: "palette-svgrepo-com.svg",
