@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
-import {Rating} from "../app/declarations";
+import {DAILY, Day, Rating, WEEKEND} from "../app/declarations";
 import {ARCHITEKTUR, ATTRAKTION, BAHN, BIER, BLUMEN, BOGENSCHIESSEN, EISLAUFEN, ERLEBNISWELT, GESCHICHTE, HOEHLE, KLETTERGARTEN, KLETTERN, KUNST, MINIGOLF, MUSEUM, NATURAKTIVITAET, PARK, RELIGION, RIDING, SCHIFF, SCHLOSS, SCHNAPS, SCHWIMMEN, SKI, SOMMERRODELBAHN, STADTRUNDGANG, TECHNIK, TRAMPOLIN, VERKEHR, WANDERN, WEIN, ZOO} from "./TAGS";
 
 const ratings: {
     [key: string]: Rating
 } = {
-    "1265": {rating: 1, tag: [BAHN, NATURAKTIVITAET, WANDERN], district: "NK"},
-    "1010": {rating: 2, tag: [BLUMEN], district: "KR"},
-    "1394": {rating: 1, tag: [ATTRAKTION], district: "W"},
+    "1265": {rating: 1, tag: [BAHN, NATURAKTIVITAET, WANDERN], district: "NK", opening: [{from: "2025-04-26", to: "2025-11-02", days: DAILY}]},
+    "1010": {rating: 2, tag: [BLUMEN], district: "KR", opening: [{from: "2025-03-15", to: "2025-10-31", days:DAILY}, {from: "2025-11-02", to: "2026-01-06", days: DAILY}]},
+    "1394": {rating: 1, tag: [ATTRAKTION], district: "W", opening: [{from: "2025-02-01", to: "2026-01-06", days: DAILY}]},
     "1190": {rating: 2, tag: [NATURAKTIVITAET, WANDERN], district: "NK"},
     "826": {rating: 2, tag: [BLUMEN], district: "TU"},
     "18692": {rating: 2, tag: [SCHLOSS], district: "GF"},
@@ -17,7 +17,7 @@ const ratings: {
     "1196": {rating: 3, tag: [SCHLOSS], district: "ME"},
     "1343": {rating: 3, tag: [ZOO], district: "AM"},
     "1289": {rating: 4, tag: [SCHWIMMEN], district: "GM"},
-    "1138": {rating: 1, tag: [PARK], district: "MD"},
+    "1138": {rating: 1, tag: [PARK], district: "MD", opening: [{from: "2025-03-29", to: "2025-11-02", days: DAILY}]},
     "1210": {rating: 1, tag: [MUSEUM], district: "BL"},
     "1414": {rating: 3, tag: [ZOO], district: "W"},
     "1293": {rating: 1, tag: [ATTRAKTION, SOMMERRODELBAHN], district: "NK"},
@@ -55,14 +55,14 @@ const ratings: {
     "794": {rating: 2, tag: [ERLEBNISWELT, TECHNIK], district: "ME"},
     "932566": {rating: 3, tag: [NATURAKTIVITAET, RIDING], district: "AM"},
     "18932": {rating: 3, tag: [ERLEBNISWELT], district: "WT"},
-    "932633": {rating: 1, tag: [NATURAKTIVITAET, BOGENSCHIESSEN], district: "NK"},
+    "932633": {rating: 1, tag: [NATURAKTIVITAET, BOGENSCHIESSEN], district: "NK", opening: [{from: "2025-03-15", to: "2025-12-01", days: [Day.FR, Day.SA, Day.SO, Day.FE]}]},
     "932595": {rating: 1, tag: [ERLEBNISWELT, BIER], district: "SB"},
     "804": {rating: 3, tag: [SCHLOSS], district: "MA"},
     "806": {rating: 3, tag: [SCHLOSS], district: "MD"},
     "808": {rating: 3, tag: [SCHLOSS], district: "OP"},
     "811": {rating: 3, tag: [SCHLOSS], district: "ME"},
     "814": {rating: 4, tag: [SCHWIMMEN], district: "WB"},
-    "932342": {rating: 1, tag: [NATURAKTIVITAET, WANDERN, SCHLOSS], district: ""},
+    "932342": {rating: 1, tag: [NATURAKTIVITAET, WANDERN, SCHLOSS], district: "", opening: [{from: "2025-03-22", to: "2025-10-31", days: DAILY}]},
     "816": {rating: 4, tag: [SCHWIMMEN], district: ""},
     "818": {rating: 2, tag: [MUSEUM, KUNST], district: ""},
     "820": {rating: 3, tag: [SCHIFF], district: ""},
@@ -140,7 +140,8 @@ const ratings: {
     "979": {rating: 2, tag: [MUSEUM], district: ""},
     "981": {rating: 4, tag: [MUSEUM], district: ""},
     "1267": {rating: 1, tag: [MUSEUM], district: ""},
-    "983": {rating: 1, tag: [NATURAKTIVITAET, WANDERN, HOEHLE], district: ""},
+    "983": {rating: 1, tag: [NATURAKTIVITAET, WANDERN, HOEHLE], district: "", opening: [
+        {from: "2025-03-29", to: "2025-04-05", days: WEEKEND}, {from: "2025-04-12", to: "2025-04-21", days: DAILY}, "2025-04-26", "2025-04-27", {from: "2025-05-01", to: "2025-09-30", days: DAILY}, {from: "2025-10-01", to: "2025-11-02", days: WEEKEND}]},
     "18921": {rating: 1, tag: [BAHN], district: ""},
     "996": {rating: 3, tag: [SCHLOSS], district: ""},
     "293870": {rating: 1, tag: [MUSEUM], district: ""},
@@ -357,6 +358,27 @@ const ratings: {
     "293862": {rating: 2, tag: [STADTRUNDGANG], district: ""},
     "1238": {rating: 3, tag: [SCHLOSS], district: ""},
     "1309": {rating: 3, tag: [MUSEUM], district: ""},
+    "1326031": {rating: 1, tag: [MUSEUM, KUNST], district: "TU"},
+    "1326029": {rating: 2, tag: [ZOO], district: "WB"},
+    "1326042": {rating: 2, tag: [ERLEBNISWELT, BLUMEN], district: "KR"},
+    "1326024": {rating: 4, tag: [ATTRAKTION], district: "BM"},
+    "1326025": {rating: 2, tag: [MUSEUM], district: "W"},
+    "1326027": {rating: 2, tag: [KLETTERN], district: "WN"},
+    "1326037": {rating: 2, tag: [WEIN], district: "HO"},
+    "1326034": {rating: 2, tag: [BIER], district: "SB"},
+    "1334001": {rating: 1, tag: [STADTRUNDGANG], district: "BL"},
+    "1333902": {rating: 4, tag: [ATTRAKTION], district: "ZE"},
+    "1326033": {rating: 1, tag: [MUSEUM, RELIGION], district: "P"},
+    "1326041": {rating: 4, tag: [SCHWIMMEN], district: "GM"},
+    "1326026": {rating: 2, tag: [MUSEUM, KUNST], district: "W"},
+    "1326039": {rating: 4, tag: [ATTRAKTION], district: "HL"},
+    "1326032": {rating: 4, tag: [MUSEUM, KUNST], district: "P"},
+    "1326030": {rating: 1, tag: [NATURAKTIVITAET, KLETTERGARTEN], district: "TU"},
+    "1326028": {rating: 2, tag: [ATTRAKTION, MINIGOLF], district: "NK"},
+    "1326036": {rating: 2, tag: [KLETTERN], district: "MI"},
+    "1326038": {rating: 2, tag: [MUSEUM, KUNST], district: "MI"},
+    "1326035": {rating: 2, tag: [MUSEUM], district: "TU"},
+    "1326040": {rating: 3, tag: [STADTRUNDGANG], district: "GM"},
 
 
 

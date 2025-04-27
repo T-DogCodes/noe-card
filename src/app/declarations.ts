@@ -81,9 +81,21 @@ export type Entry = {
 export type Rating = {
     rating: number,
     tag?: string[],
-    district: string
-
+    district: string,
+    opening?: (string|TimeSpan)[]
 }
+export type TimeSpan = {
+    from: string,
+    to: string,
+    days: Day[]
+}
+
+export enum Day {
+    MO, DI, MI, DO, FR, SA, SO, FE
+}
+
+export const DAILY = [Day.MO, Day.DI, Day.MI, Day.DO, Day.FR, Day.SA, Day.SO, Day.FE];
+export const WEEKEND = [Day.SA, Day.SO, Day.FE];
 
 
 export enum State {
