@@ -4,7 +4,7 @@ import {NoeCardResponse, Trip} from "../app/declarations";
 @Injectable({
     providedIn: 'root'
 })
-export class TripsService {
+export class OldTripsService {
 
 
     readonly TRIPS: Trip[] = [

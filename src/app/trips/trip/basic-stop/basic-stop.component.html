@@ -1,0 +1,27 @@
+<div [class]="'card ' + (isEven ? 'even' : 'odd')" *ngIf="value != null">
+    <div class="image">
+        <img [src]="value.mainImage.cardUrl1x" [alt]="value.mainImage.altText">
+    </div>
+    <div class="card-content">
+        <h2>{{value.title}}</h2>
+        <div [innerHTML]="value.description | description | removeBr" class="description"></div>
+        <div class="infos">
+            <div *ngIf="stop.duration">
+                <div class="info-title">{{stop.durationCaption ?? 'Geschätzte Dauer'}}:</div>
+                <div>{{stop.duration}}</div>
+            </div>
+            <div>
+                <div class="info-title">Adresse:</div>
+                <div>{{getAddress()}}</div>
+            </div>
+            <div *ngIf="stop.connections">
+                <div class="info-title">Anreise:</div>
+                <div class="info-connections">
+                    <div *ngFor="let con of stop.connections, let i = index">{{con.station}}
+                        <span *ngFor="let l of con.lines" [class]="l.type">{{l.name}}</span><span *ngIf="i != (stop.connections.length - 1)"> -&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

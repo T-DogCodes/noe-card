@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NoecardService} from "../../service/noecard.service";
 import {Filter, NoeCardResponse, Trip} from "../declarations";
-import {TripsService} from "../../service/trips.service";
+import {OldTripsService} from "../../service/old-trips.service";
 
 @Component({
     selector: 'app-list-app',
@@ -18,7 +18,7 @@ export class ListAppComponent implements OnInit {
 
     constructor(
         private noecardService: NoecardService,
-        private tripsService: TripsService
+        private tripsService: OldTripsService
     ) {
     }
 

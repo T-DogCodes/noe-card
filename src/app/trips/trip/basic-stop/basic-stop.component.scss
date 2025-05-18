@@ -1,0 +1,17 @@
+.infos > div {
+    display: flex;
+}
+
+.info-title {
+    margin-right: 1mm;
+    font-weight: bold;
+}
+
+.connection {
+    white-space: nowrap;
+}
+
+.info-connections {
+    display: flex;
+    flex-wrap: wrap;
+}

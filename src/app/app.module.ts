@@ -19,8 +19,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CreditsComponent } from './credits/credits.component';
 import {FormsModule} from "@angular/forms";
 import { TripsComponent } from './trips/trips.component';
-import { TripComponent } from './trip/trip.component';
+import { OldTripComponent } from './trip/old-trip.component';
 import { UncategorizedPipe } from './compact-app/uncategorized.pipe';
+import {TripComponent} from "./trips/trip/trip.component";
+import { BasicStopComponent } from './trips/trip/basic-stop/basic-stop.component';
+import { ConnectionStopComponent } from './trips/trip/connection-stop/connection-stop.component';
+import { RemoveBrPipe } from './remove-br.pipe';
 
 @NgModule({
     declarations: [
@@ -39,8 +43,12 @@ import { UncategorizedPipe } from './compact-app/uncategorized.pipe';
         NavbarComponent,
         CreditsComponent,
         TripsComponent,
+        OldTripComponent,
         TripComponent,
-        UncategorizedPipe
+        UncategorizedPipe,
+        BasicStopComponent,
+        ConnectionStopComponent,
+        RemoveBrPipe
     ],
     imports: [
         BrowserModule,

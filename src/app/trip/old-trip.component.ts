@@ -1,21 +1,21 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {TripsService} from "../../service/trips.service";
+import {OldTripsService} from "../../service/old-trips.service";
 import {Trip} from "../declarations";
 
 @Component({
     selector: 'app-trip',
-    templateUrl: './trip.component.html',
-    styleUrls: ['./trip.component.scss']
+    templateUrl: './old-trip.component.html',
+    styleUrls: ['./old-trip.component.scss']
 })
-export class TripComponent implements OnInit {
+export class OldTripComponent implements OnInit {
 
     tripId!: number;
     trip!: Trip
 
     constructor(
         private route: ActivatedRoute,
-        private tripsService: TripsService
+        private tripsService: OldTripsService
     ) {
     }
 

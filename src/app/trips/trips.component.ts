@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import {Trip} from "../declarations";
-import {TripsService} from "../../service/trips.service";
+import {Component, OnInit} from '@angular/core';
+import {TripService} from "../../service/trip.service";
+import {Trip} from "./trip/trip.model";
 
 @Component({
-  selector: 'app-trips',
-  templateUrl: './trips.component.html',
-  styleUrls: ['./trips.component.scss']
+    selector: 'app-trips',
+    templateUrl: './trips.component.html',
+    styleUrls: ['./trips.component.scss']
 })
 export class TripsComponent implements OnInit {
-    trips!: Trip[];
+    trips: (Trip & { id: string })[] = [];
 
-  constructor(private tripsService: TripsService) { }
+    constructor(private tripsService: TripService) {
+    }
 
-  ngOnInit(): void {
-      this.trips = this.tripsService.TRIPS;
-  }
+    ngOnInit(): void {
+        this.trips = this.tripsService.getTrips();
+    }
 }

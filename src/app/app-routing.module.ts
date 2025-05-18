@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {CompactAppComponent} from "./compact-app/compact-app.component";
 import {ListAppComponent} from "./list-app/list-app.component";
 import {CreditsComponent} from "./credits/credits.component";
 import {TripsComponent} from "./trips/trips.component";
-import {TripComponent} from "./trip/trip.component";
+import {TripComponent} from "./trips/trip/trip.component";
 
 const routes: Routes = [
     {path: "", component: ListAppComponent},
