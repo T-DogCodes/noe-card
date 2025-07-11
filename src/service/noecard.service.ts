@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs";
+import {firstValueFrom, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {NoeCardResponse} from "../app/declarations";
 
@@ -44,5 +44,14 @@ export class NoecardService {
 
     public getData(searchCriteria: any): Observable<NoeCardResponse> {
         return this.http.post<NoeCardResponse>("https://www.niederoesterreich-card.at/api/v1/activity/search/excursion", searchCriteria)
+    }
+
+    private data: NoeCardResponse | null = null;
+
+    public async getDataNew(): Promise<NoeCardResponse> {
+        if (!this.data) {
+            this.data = await firstValueFrom(this.getData(NoecardService.SEARCH_CRIETERIA));
+        }
+        return this.data!!;
     }
 }

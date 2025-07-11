@@ -25,6 +25,7 @@ import {TripComponent} from "./trips/trip/trip.component";
 import { BasicStopComponent } from './trips/trip/basic-stop/basic-stop.component';
 import { ConnectionStopComponent } from './trips/trip/connection-stop/connection-stop.component';
 import { RemoveBrPipe } from './remove-br.pipe';
+import { FilterHeaderPipe } from './filter-header.pipe';
 
 @NgModule({
     declarations: [
@@ -48,7 +49,8 @@ import { RemoveBrPipe } from './remove-br.pipe';
         UncategorizedPipe,
         BasicStopComponent,
         ConnectionStopComponent,
-        RemoveBrPipe
+        RemoveBrPipe,
+        FilterHeaderPipe
     ],
     imports: [
         BrowserModule,

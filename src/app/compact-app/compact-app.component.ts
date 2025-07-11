@@ -26,34 +26,7 @@ export class CompactAppComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.noecardService.getData({
-            "categories": [
-                "3",
-                "5",
-                "7",
-                "9",
-                "11",
-                "13",
-                "15",
-                "17"
-            ],
-            "visited": false,
-            "notVisited": false,
-            "onlineBookable": false,
-            "favorite": false,
-            "from": 0,
-            "size": 900,
-            "sortBy": [
-                {
-                    "field": "score",
-                    "order": "desc"
-                },
-                {
-                    "field": "title",
-                    "order": "asc"
-                }
-            ]
-        }).subscribe(value => this.data = value)
+        this.noecardService.getDataNew().then(value => this.data = value)
     }
 
 

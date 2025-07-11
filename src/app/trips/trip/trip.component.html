@@ -1,6 +1,10 @@
+<div class="trip">
 <div class="page" *ngFor="let page of pages">
+    <div *ngIf="getHeader(page) != undefined">
+        <h1><span class="arrow">►</span> <span class="title">{{getHeader(page)?.title}}</span></h1>
+    </div>
     <div class="wrapper" *ngIf="response != null">
-        <div class="card-wrapper" *ngFor="let stop of page, let i = index">
+        <div class="card-wrapper" *ngFor="let stop of page | filterHeader: getHeader(page)?.title, let i = index" >
             <app-basic-stop
                 *ngIf="stop.type == 'basic'"
                 [isEven]="i % 2 == 0"
@@ -8,8 +12,12 @@
                 [data]="response"
                 [id]="tripId"
             ></app-basic-stop>
-            <app-connection-stop *ngIf="stop.type == 'connection'" [isEven]="i % 2 == 0"
-                                 [stop]="stop"></app-connection-stop>
+            <app-connection-stop
+                *ngIf="stop.type == 'connection'"
+                [isEven]="i % 2 == 0"
+                [stop]="stop">
+            </app-connection-stop>
         </div>
     </div>
+</div>
 </div>

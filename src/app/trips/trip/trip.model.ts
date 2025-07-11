@@ -20,6 +20,11 @@ export interface ConnectionTripStop {
     connectionInfo?: string;
 }
 
+export interface HeaderTripStop {
+    type: "header",
+    title: string
+}
+
 export interface ConnectionHeader {
     type: "time" | "line" | "info"
     title?: string
@@ -31,7 +36,11 @@ export interface CustomStop {
     info?: any
 }
 
-export type TripStop = BasicTripStop | ConnectionTripStop | CustomStop;
+export interface FillerTripStop {
+    type: "filler"
+}
+
+export type TripStop = BasicTripStop | ConnectionTripStop | CustomStop | HeaderTripStop | FillerTripStop;
 
 export interface Connection {
     station: string

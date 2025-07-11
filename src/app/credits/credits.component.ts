@@ -12,63 +12,8 @@ import {ARCHITEKTUR, BIER, ERLEBNISWELT, GESCHICHTE, KUNST, MUSEUM, RELIGION, SC
     templateUrl: './credits.component.html',
     styleUrls: ['./credits.component.scss']
 })
-export class CreditsComponent implements OnInit {
-
-    output: string[] = [];
-
+export class CreditsComponent {
     constructor(
-        private noecardService: NoecardService,
-        private ratingService: RatingService
     ) {
     }
-
-    TAGS = [
-        MUSEUM, ERLEBNISWELT, STADTRUNDGANG,
-        GESCHICHTE, ARCHITEKTUR, KUNST, RELIGION,
-        WEIN, SCHNAPS, TECHNIK, BIER, VERKEHR
-    ];
-
-    ngOnInit(): void {
-        this.noecardService.getData({
-            "categories": [
-                "3",
-                "5",
-                "7",
-                "9",
-                "11",
-                "13",
-                "15",
-                "17"
-            ],
-            "visited": false,
-            "notVisited": false,
-            "onlineBookable": false,
-            "favorite": false,
-            "from": 0,
-            "size": 900,
-            "sortBy": [
-                {
-                    "field": "score",
-                    "order": "desc"
-                },
-                {
-                    "field": "title",
-                    "order": "asc"
-                }
-            ]
-        }).subscribe(value => {
-            for (let entry of value.entries) {
-                const tagsOfEntry = this.ratingService.getRatingForId(entry.id)?.tag ?? [];
-                let value = [entry.id, entry.title, ...this.TAGS.map(tag => this.containsRating(tagsOfEntry, tag))].join(";")
-                if (value.includes(";X")) {
-                    this.output.push(value);
-                }
-            }
-        })
-    }
-
-    private containsRating(tags: string[], value: string) {
-        return tags.includes(value) ? "X": "";
-    }
-
 }

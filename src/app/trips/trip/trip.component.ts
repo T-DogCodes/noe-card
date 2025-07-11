@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {TripService} from "../../../service/trip.service";
-import {Trip, TripStop} from "./trip.model";
+import {HeaderTripStop, Trip, TripStop} from "./trip.model";
 import {NoecardService} from "../../../service/noecard.service";
 import {firstValueFrom} from "rxjs";
 import {NoeCardResponse} from "../../declarations";
@@ -39,6 +39,13 @@ export class TripComponent implements OnInit {
 
     private async fetchData() {
         return await firstValueFrom(this.dataService.getData(NoecardService.SEARCH_CRIETERIA))
+    }
+
+    getHeader(page: TripStop[]): HeaderTripStop | undefined {
+        return page
+            .map(stop => stop.type == "header" ? stop : undefined)
+            .filter(stop => stop != undefined)
+            ?.[0];
     }
 
 }
