@@ -5,14 +5,12 @@
     <div class="card-content">
         <h2>{{stop.title}}</h2>
         <table>
-            <colgroup>
-                <col *ngFor="let header of stop.headers" [class]="header.type">
-            </colgroup>
+
             <tr>
-                <th *ngFor="let header of stop.headers">{{header.title}}</th>
+                <th *ngFor="let header of stop.headers" [innerHTML]="header.title"></th>
             </tr>
             <tr *ngFor="let connecton of stop.connection">
-                <td *ngFor="let c of connecton">{{c}}</td>
+                <td *ngFor="let c of connecton; let i = index" [class]="getClass(i)">{{c}}</td>
             </tr>
         </table>
         <p *ngIf="stop.connectionInfo" class="trip-info">{{stop.connectionInfo}}</p>

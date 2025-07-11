@@ -114,6 +114,47 @@ export class TripService {
                 ]
             }]
         },
+        3: {
+            name: "Muckenkogel",
+            stops: [
+                {
+                    type: "connection",
+                    title: "Anreise",
+                    headers: [l(), t("Wien Hbf"), t("St. Pölten Hbf"), l(), t("St. Pölten Hbf"), t("Traisen"), l(), t("Traisen"), t("Lilienfeld")],
+                    connection: [
+                        ["RJX 560", "07:28", "07:57", "R54", "08:06", "08:30", "R55", "08:33", "08:43"],
+                        ["RJX 662", "08:28", "08:57", "R55", "09:06", "", "", "", "09:43"],
+                        ["RJX 562", "09:28", "09:57", "R54", "10:06", "10:30", "R55", "10:33", "10:43"],
+                    ]
+                },{
+                    type: "basic",
+                    id: "1281"
+                },{
+                    type: "connection",
+                    title: "Weiterreise",
+                    headers: [l(), t("Lilienfeld"), t("Türnitz HLW")],
+                    connection: [
+                        ["Bus 690", "12:48", "13:09"],
+                        ["Bus 690", "14:48", "15:09"],
+                    ]
+                },{
+                    type: "basic",
+                    id: "713"
+                },{
+                    type: "connection",
+                    title: "Rückreise",
+                    headers: [l(), t("Türnitz<br>HLW"), t("Türnitz<br>Markt"), t("Lilienfeld"), l(), t("Lilienfeld"), t("St. Pölten Hbf"), l(), t("St. Pölten Hbf"), t("Wien Hbf")],
+                    connection: [
+                        ["690", "15:51", "", "16:12", "R55", "16:17", "16:54", "RJX 67", "17:03", "17:32"],
+                        ["169", "", "16:50", "17:10", "R54/55*", "17:17", "17:54", "RJX 165", "18:03", "18:32"],
+                        ["169", "", "16:50", "", "", "", "", "", "", "18:50"],
+                        ["690", "17:51", "", "18:12", "R55", "18:17", "18:54", "RJX 67", "19:03", "19:32"],
+                    ],
+                    connectionInfo: "R55/54: Umstieg in Traisen NÖ erforderlich" +
+                        ""
+                },
+            ]
+        },
         999: {
             name: "Wien",
             stops: [[

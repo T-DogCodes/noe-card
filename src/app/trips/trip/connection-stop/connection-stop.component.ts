@@ -19,4 +19,7 @@ export class ConnectionStopComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    getClass(i: number) {
+        return this.stop.headers[i].type
+    }
 }
