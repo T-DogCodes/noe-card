@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {CardComponent} from './list-app/card/card.component';
 import {DescriptionPipe} from './description.pipe';
 import {CompactAppComponent} from './compact-app/compact-app.component';
@@ -27,8 +27,7 @@ import { ConnectionStopComponent } from './trips/trip/connection-stop/connection
 import { RemoveBrPipe } from './remove-br.pipe';
 import { FilterHeaderPipe } from './filter-header.pipe';
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         CardComponent,
         DescriptionPipe,
@@ -52,14 +51,8 @@ import { FilterHeaderPipe } from './filter-header.pipe';
         RemoveBrPipe,
         FilterHeaderPipe
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
-        HttpClientModule,
-        FormsModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-})
+        FormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
 }

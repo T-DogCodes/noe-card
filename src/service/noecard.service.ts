@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {firstValueFrom, Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {NoeCardResponse} from "../app/declarations";
 
 @Injectable({
