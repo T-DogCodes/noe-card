@@ -126,10 +126,10 @@ export class TripService {
                         ["RJX 662", "08:28", "08:57", "R55", "09:06", "", "", "", "09:43"],
                         ["RJX 562", "09:28", "09:57", "R54", "10:06", "10:30", "R55", "10:33", "10:43"],
                     ]
-                },{
+                }, {
                     type: "basic",
                     id: "1281"
-                },{
+                }, {
                     type: "connection",
                     title: "Weiterreise",
                     headers: [l(), t("Lilienfeld"), t("Türnitz HLW")],
@@ -137,10 +137,10 @@ export class TripService {
                         ["Bus 690", "12:48", "13:09"],
                         ["Bus 690", "14:48", "15:09"],
                     ]
-                },{
+                }, {
                     type: "basic",
                     id: "713"
-                },{
+                }, {
                     type: "connection",
                     title: "Rückreise",
                     headers: [l(), t("Türnitz<br>HLW"), t("Türnitz<br>Markt"), t("Lilienfeld"), l(), t("Lilienfeld"), t("St. Pölten Hbf"), l(), t("St. Pölten Hbf"), t("Wien Hbf")],
@@ -152,6 +152,129 @@ export class TripService {
                     ],
                     connectionInfo: "R55/54: Umstieg in Traisen NÖ erforderlich" +
                         ""
+                },
+            ]
+        },
+        4: {
+            name: "Krems",
+            stops: [[
+                {
+                    type: "basic",
+                    id: "994"
+                }, {
+                    type: "basic",
+                    id: "1042"
+                }, {
+                    type: "basic",
+                    id: "1037"
+                }, {
+                    type: "basic",
+                    id: "907"
+                },
+            ], [
+                {
+                    type: "basic",
+                    id: "948"
+                }, {
+                    type: "basic",
+                    id: "830"
+                }, {
+                    type: "basic",
+                    id: "1119"
+                }, {
+                    type: "basic",
+                    id: "769"
+                }, {
+                    type: "basic",
+                    id: "1404"
+                },
+            ]]
+        },
+        5: {
+            name: "Tulln",
+            stops: [[
+                {
+                    type: "basic",
+                    id: "826"
+                }, {
+                    type: "basic",
+                    id: "293858"
+                }, {
+                    type: "basic",
+                    id: "18667"
+                }, {
+                    type: "basic",
+                    id: "1313"
+                }, {
+                    type: "basic",
+                    id: "293858"
+                }
+            ], [
+                {type: "filler"},
+                {
+                    type: "basic",
+                    id: "747"
+                },{
+                    type: "basic",
+                    id: "956"
+                },{
+                    type: "basic",
+                    id: "1033"
+                },
+            ]]
+        },
+        6: {
+            name: "Berndorfer Stilklassen",
+            stops: [
+                {
+                    title: "Anreise",
+                    type: "connection",
+                    headers: [l(), t("Praterstern"), t("Hauptbahnhof"), t("Leobersdorf"), l(), t("Leobersdorf"), t("Berndorf Stadt")],
+                    connection: [
+                        ["REX 1", "08:18", "08:28", "09:05", "R96", "09:14", "09:33"],
+                        ["REX 1", "09:18", "09:28", "10:05", "R96", "10:14", "10:33"],
+                        ["REX 1", "10:18", "10:28", "11:05", "R96", "11:14", "11:33"],
+                    ]
+                }, {
+                    type: "basic",
+                    id: "791",
+                    duration: "1-2h"
+                }, {
+                    type: "basic",
+                    id: "1027",
+                    duration: "1h"
+                }, {
+                    title: "Weiterreise",
+                    type: "connection",
+                    headers: [l(), t("Berndorf<br>Stadt Bhf."), t("Berndorf<br>Heinfelder Str."), t("Wittmannsdorf"), t("Leobersdorf<br>Hauptschulplatz")],
+                    connection: [
+                        ["R96", "13:27", "", "13:42", ""],
+                        ["313", "", "13:38", "", "14:01"],
+                        ["R96", "14:27", "", "14:42", ""],
+                        ["R96", "15:27", "", "15:42", ""],
+                        ["313", "", "15:38", "", "15:01"],
+                        ["R96", "16:27", "", "16:42", ""],
+                    ]
+                }, {
+                    type: "basic",
+                    id: "1050",
+                    duration: "1-2h"
+                }, {
+                    type: "basic",
+                    id: "1078",
+                    duration: "1-2h"
+                },{
+                    title: "Rückreise",
+                    type: "connection",
+                    headers: [l(), t("Berndorf<br>Stadt Bhf."), t("Berndorf<br>Heinfelder Str."), t("Wittmannsdorf"), t("Leobersdorf<br>Hauptschulplatz")],
+                    connection: [
+                        ["R96", "13:27", "", "13:42", ""],
+                        ["313", "", "13:38", "", "14:01"],
+                        ["R96", "14:27", "", "14:42", ""],
+                        ["R96", "15:27", "", "15:42", ""],
+                        ["313", "", "15:38", "", "15:01"],
+                        ["R96", "16:27", "", "16:42", ""],
+                    ]
                 },
             ]
         },
@@ -402,11 +525,11 @@ export class TripService {
                         type: "basic",
                         id: "932631",
                         connections: [{station: "Pressbaum", lines: [s("S50"), rex("REX 51")]}]
-                    },{
+                    }, {
                         type: "basic",
                         id: "1015",
                         connections: [{station: "Klosterneuburg-Kierling", lines: [s("S40")]}]
-                    },{
+                    }, {
                         type: "basic",
                         id: "1326030",
                         connections: [
@@ -425,14 +548,14 @@ export class TripService {
                         connections: [
                             {station: "Vösendorf SCS IKEA", lines: [rb(207)]},
                             {station: "Maria Enzersdorf Südstadt", lines: [WLB]}]
-                    },{
+                    }, {
                         type: "basic",
                         id: "1326036",
                         connections: [
                             {station: "Wolkersdorf", lines: [s("S2"), rex("REX 2")]}
                         ]
                     },
-                ],[
+                ], [
                     {type: "header", title: "Schwimmen & Sonstiger Sport Umgebung Wien"},
                     {
                         type: "basic",
@@ -445,7 +568,7 @@ export class TripService {
                         type: "basic",
                         id: "860",
                         connections: [{station: "Klosterneuburg-Kierling", lines: [s("S40")]}]
-                    },{
+                    }, {
                         type: "basic",
                         id: "1035",
                         connections: [
@@ -464,13 +587,13 @@ export class TripService {
                         type: "basic",
                         id: "1326031",
                         connections: [{station: "Klosterneuburg-Weidling", lines: [s("S40"), rb(400)]}]
-                    },{
+                    }, {
                         type: "basic",
                         id: "1107",
                         connections: [
                             {station: "Mödling", lines: [s("S2-4"), rex("REX 1"), rex("REX 3")]}
                         ]
-                    },{
+                    }, {
                         type: "basic",
                         id: "1325",
                         connections: [{station: "Klosterneuburg-Kierling", lines: [s("S40")]}]
@@ -485,11 +608,11 @@ export class TripService {
                         type: "basic",
                         id: "840",
                         connections: [{station: "Schwechat", lines: [s("S7"), rex("REX 7"), bus("71A")]}]
-                    },{
+                    }, {
                         type: "basic",
                         id: "843",
                         connections: [{station: "Silberwald", lines: [s("S1")]}]
-                    },{
+                    }, {
                         type: "basic",
                         id: "894",
                         connections: [{station: "Flughafen Wien", lines: [s("S7"), rex("REX 7")]}]
@@ -498,17 +621,17 @@ export class TripService {
 
                 [
                     {type: "header", title: "Sonstiges Umgebung Wien"}, {type: "filler"},
-                     {
+                    {
                         type: "basic",
                         id: "806",
                         connections: [{station: "Mödling", lines: [s("S2-4"), rex("REX 1"), rex("REX 3")]}]
                     }, {
-                        type: "basic",
-                        id: "932625",
-                        connections: [
-                            {station: "Vösendorf SCS", lines: [WLB, rb(207)]}
-                        ]
-                    },
+                    type: "basic",
+                    id: "932625",
+                    connections: [
+                        {station: "Vösendorf SCS", lines: [WLB, rb(207)]}
+                    ]
+                },
                 ]]
         }
     }

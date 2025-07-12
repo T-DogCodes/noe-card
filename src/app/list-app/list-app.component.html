@@ -1,5 +1,9 @@
 <app-filter (filterValues)="onFilterChange($event)"></app-filter>
 
-<div class="list" *ngIf="data != null">
-    <app-card *ngFor="let e of data.entries | filter:filter" [value]="e"></app-card>
-</div>
+@if (data != null) {
+    <div class="list">
+        @for (e of data.entries | filter:filter; track e.id) {
+            <app-card [value]="e"></app-card>
+        }
+    </div>
+}
