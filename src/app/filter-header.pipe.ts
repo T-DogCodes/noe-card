@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import {HeaderTripStop, TripStop} from "./trips/trip/trip.model";
 
 @Pipe({
-  name: 'filterHeader'
+    name: 'filterHeader',
+    standalone: false
 })
 export class FilterHeaderPipe implements PipeTransform {
 

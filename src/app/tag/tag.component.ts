@@ -5,7 +5,8 @@ import {State} from "../declarations";
 @Component({
     selector: 'app-tag',
     templateUrl: './tag.component.html',
-    styleUrls: ['./tag.component.scss']
+    styleUrls: ['./tag.component.scss'],
+    standalone: false
 })
 export class TagComponent implements OnInit {
 

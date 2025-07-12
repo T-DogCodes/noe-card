@@ -13,7 +13,8 @@ import {Filter, SORTING_CRITERIA_NAME, SORTING_CRITERIAS, SortingCriteria, State
 @Component({
     selector: 'app-filter',
     templateUrl: './filter.component.html',
-    styleUrls: ['./filter.component.scss']
+    styleUrls: ['./filter.component.scss'],
+    standalone: false
 })
 export class FilterComponent implements OnInit {
 

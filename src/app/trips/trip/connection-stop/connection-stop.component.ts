@@ -4,7 +4,8 @@ import {ConnectionTripStop} from "../trip.model";
 @Component({
     selector: 'app-connection-stop',
     templateUrl: './connection-stop.component.html',
-    styleUrls: ['./connection-stop.component.scss', '../trip.global.scss']
+    styleUrls: ['./connection-stop.component.scss', '../trip.global.scss'],
+    standalone: false
 })
 export class ConnectionStopComponent implements OnInit {
 

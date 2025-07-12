@@ -3,7 +3,8 @@ import {Entry, Filter, FilterElement, SortingCriteria, State} from "../declarati
 import {RatingService} from "../../service/rating.service";
 
 @Pipe({
-    name: 'filter'
+    name: 'filter',
+    standalone: false
 })
 export class FilterPipe implements PipeTransform {
 

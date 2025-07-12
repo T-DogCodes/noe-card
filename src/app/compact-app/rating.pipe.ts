@@ -7,7 +7,8 @@ import {Entry} from "../declarations";
  * rating.
  */
 @Pipe({
-    name: 'rating'
+    name: 'rating',
+    standalone: false
 })
 export class RatingPipe implements PipeTransform {
 

@@ -11,9 +11,10 @@ import {NoecardService} from "../../service/noecard.service";
  * The view allows filtering the page
  */
 @Component({
-  selector: 'app-compact-app',
-  templateUrl: './compact-app.component.html',
-  styleUrls: ['./compact-app.component.scss']
+    selector: 'app-compact-app',
+    templateUrl: './compact-app.component.html',
+    styleUrls: ['./compact-app.component.scss'],
+    standalone: false
 })
 export class CompactAppComponent implements OnInit {
 

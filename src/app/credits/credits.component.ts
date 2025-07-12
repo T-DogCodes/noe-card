@@ -10,7 +10,8 @@ import {ARCHITEKTUR, BIER, ERLEBNISWELT, GESCHICHTE, KUNST, MUSEUM, RELIGION, SC
 @Component({
     selector: 'app-credits',
     templateUrl: './credits.component.html',
-    styleUrls: ['./credits.component.scss']
+    styleUrls: ['./credits.component.scss'],
+    standalone: false
 })
 export class CreditsComponent {
     constructor(

@@ -6,7 +6,8 @@ import {Trip} from "../declarations";
 @Component({
     selector: 'app-trip',
     templateUrl: './old-trip.component.html',
-    styleUrls: ['./old-trip.component.scss']
+    styleUrls: ['./old-trip.component.scss'],
+    standalone: false
 })
 export class OldTripComponent implements OnInit {
 

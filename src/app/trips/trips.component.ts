@@ -5,7 +5,8 @@ import {Trip} from "./trip/trip.model";
 @Component({
     selector: 'app-trips',
     templateUrl: './trips.component.html',
-    styleUrls: ['./trips.component.scss']
+    styleUrls: ['./trips.component.scss'],
+    standalone: false
 })
 export class TripsComponent implements OnInit {
     trips: (Trip & { id: string })[] = [];

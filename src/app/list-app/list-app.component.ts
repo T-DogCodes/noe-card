@@ -6,7 +6,8 @@ import {OldTripsService} from "../../service/old-trips.service";
 @Component({
     selector: 'app-list-app',
     templateUrl: './list-app.component.html',
-    styleUrls: ['./list-app.component.scss']
+    styleUrls: ['./list-app.component.scss'],
+    standalone: false
 })
 export class ListAppComponent implements OnInit {
 

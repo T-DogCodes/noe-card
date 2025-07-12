@@ -3,9 +3,10 @@ import {NoecardService} from "../service/noecard.service";
 import {NoeCardResponse} from "./declarations";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements OnInit{
 

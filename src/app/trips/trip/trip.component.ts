@@ -7,9 +7,10 @@ import {firstValueFrom} from "rxjs";
 import {NoeCardResponse} from "../../declarations";
 
 @Component({
-  selector: 'app-trip',
-  templateUrl: './trip.component.html',
-  styleUrls: ['./trip.component.scss']
+    selector: 'app-trip',
+    templateUrl: './trip.component.html',
+    styleUrls: ['./trip.component.scss'],
+    standalone: false
 })
 export class TripComponent implements OnInit {
 

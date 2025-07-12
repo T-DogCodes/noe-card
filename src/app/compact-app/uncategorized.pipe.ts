@@ -3,7 +3,8 @@ import {Entry} from "../declarations";
 import {RatingService} from "../../service/rating.service";
 
 @Pipe({
-    name: 'uncategorized'
+    name: 'uncategorized',
+    standalone: false
 })
 export class UncategorizedPipe implements PipeTransform {
 

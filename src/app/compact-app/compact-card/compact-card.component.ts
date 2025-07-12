@@ -10,9 +10,10 @@ import {RatingService} from "../../../service/rating.service";
  * to navigate to the information page on the noe-card website
  */
 @Component({
-  selector: 'app-compact-card',
-  templateUrl: './compact-card.component.html',
-  styleUrls: ['./compact-card.component.scss']
+    selector: 'app-compact-card',
+    templateUrl: './compact-card.component.html',
+    styleUrls: ['./compact-card.component.scss'],
+    standalone: false
 })
 export class CompactCardComponent implements OnInit {
 

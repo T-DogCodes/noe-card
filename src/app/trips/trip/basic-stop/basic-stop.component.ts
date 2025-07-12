@@ -5,7 +5,8 @@ import {Entry, NoeCardResponse} from "../../../declarations";
 @Component({
     selector: 'app-basic-stop',
     templateUrl: './basic-stop.component.html',
-    styleUrls: ['./basic-stop.component.scss', '../trip.global.scss']
+    styleUrls: ['./basic-stop.component.scss', '../trip.global.scss'],
+    standalone: false
 })
 export class BasicStopComponent implements OnInit {
 
